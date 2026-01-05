@@ -1,3 +1,4 @@
 image_classification_CNN/data
 image_classification_CNN/models
 image_classification_CNN/mobilenet_data/
+prompts/
