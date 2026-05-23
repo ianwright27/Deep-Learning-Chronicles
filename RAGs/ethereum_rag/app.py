@@ -1,3 +1,5 @@
+import os
+os.environ["ANONYMIZED_TELEMETRY"] = "False"
 from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import Chroma
@@ -6,7 +8,7 @@ from langchain_ollama import ChatOllama
 
 
 # load the PDF document
-loader = PyPDFLoader("docs/introduction_to_ethereum.pdf")
+loader = PyPDFLoader("docs/introduction-to-ethereum.pdf")
 docs = loader.load()
 
 # split text into chunks
@@ -17,10 +19,14 @@ splits = text_splitter.split_documents(docs)
 embeddings = OllamaEmbeddings(model="qwen2.5:3b")
 
 # Store in Chroma vector database 
+from chromadb.config import Settings
 vectorstore = Chroma.from_documents(
     documents=splits,
     embedding=embeddings,
-    persist_directory="./chroma_db"
+    persist_directory="chroma_db",
+    client_settings=Settings(
+        anonymized_telemetry=False
+    )
 )
 
 # user query 
