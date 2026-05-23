@@ -28,6 +28,8 @@ This repository covers a spectrum of deep learning topics:
 
 ## 📝 Note
 
-This README is actively maintained and will be updated as the repository grows.
+(This README is actively maintained and will be updated as the repository grows)
+- **Updates**
+💡 - Check out [the new "Ethereum" RAG example here](https://github.com/ianwright27/Deep-Learning-Chronicles/tree/main/RAGs/ethereum_rag)
 
 --- 

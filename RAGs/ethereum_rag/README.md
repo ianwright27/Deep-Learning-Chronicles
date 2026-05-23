@@ -1,6 +1,6 @@
 # Ethereum RAG (Local LLM + ChromaDB)
 
-![Ethereum RAG Demo](docs/screenshot.png)
+![Ethereum RAG Demo](screenshot.png)
 
 A fully local Retrieval-Augmented Generation (RAG) system that allows you to ask questions about Ethereum documentation using a local LLM (via Ollama), without any paid APIs.
 
